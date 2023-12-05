@@ -1,0 +1,969 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*____mobile first___________mobile first______________mobile first____________mobile first___________________*/
+
+/* ------- colour ref----------------------*/
+
+:root{
+
+	/*vibrant colour--*/
+		--purple:#745296;
+		--teal:#258ea6;
+		--green:#a4c7ad;
+		--pink:#f492ca;
+		--orange:#ffcc99;
+	
+	/*pastel--*/
+	
+		--pastel-purple:#c4bccc;
+		--pastel-teal:#c6e8e1;
+		--pastel-green:#d4dcb0;
+		--pastel-pink:#f5d4e5;
+		--pastel-orange:#f1e3d3;
+		
+	/*tones--*/
+		--black:#000000;
+		--slate:#383d3b;
+		--griege:#c4bcac;
+		--beige:#e6dcc9;
+		--pale-yellow:#f2edd0;
+	
+	/*named-properties--*/	
+		--button-text:#DFDFDF;
+		--background-colour: #EDECEA;
+		--text-colour: #202020;
+	}
+
+/*_____all site CSS_______________________________________*/
+
+
+:root{
+	background-image: url(images/textures-and-background/paper.png);
+	background-size: 50px;
+	background-color: var(--background-colour);
+	color: var(--text-colour);
+}
+
+body{
+	box-sizing: border-box;
+	font-family: 'Jost', sans-serif;
+	line-height: 1.7em;
+	font-weight: 300;
+}
+
+main{
+	padding: 10px 20px;
+	max-width: 500px;
+	margin: auto;
+	display: grid;
+}
+
+p{
+	padding-bottom: 20px;
+}
+
+p:last-of-type{
+	padding-bottom: 40px;
+}
+
+h1{
+	font-size: 1.7em;
+	font-weight:900;
+	line-height: 1.3em;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+h2{	
+	text-align: center;
+	font-size: 1.5em;
+	font-weight:500;
+	line-height: 1.3em;
+	justify-self: center;
+	grid-column: 1/3;
+	padding-bottom: 20px;
+}
+
+h3{
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+dl{
+	padding-bottom: 20px;
+}
+
+ul:last-of-type{
+	padding-bottom: 20px;
+}
+
+dt{
+	font-weight: 700;
+}
+
+figcaption{
+	font-family: 'Special Elite', cursive;
+	text-align: center;
+	font-size: .8em;
+	line-height: 1.3em;
+	padding-bottom: 20px;
+}
+
+main img{
+	max-width: 120px;
+}
+
+main figure{
+	max-width: 120px;
+}
+
+main picture{
+	max-width: 120px;
+}
+
+a{
+	color: var(--text-colour);
+	text-decoration: underline;
+}
+
+a:hover{
+	background-color: var(--pastel-teal);
+}
+
+/*_____header__________________________________________*/
+
+header img{
+	display: block;
+	margin:auto;
+	max-width: 150px;
+	max-height: 150px;
+}
+
+header{
+	padding: 20px 20px 20px 20px;
+	display: grid;
+	background-image:
+		url(images/textures-and-background/gridlines.png);
+		background-size: 40px;
+}
+
+svg{
+	width: 20px;
+}
+
+nav ul{
+	justify-self: center;
+	
+}
+
+nav ul{
+	display: grid;
+	grid-template-columns: 90px 100px 70px;
+	justify-items: center;
+	font-size: .75em;
+}
+
+.nav-toggle-label{
+	justify-self: center;
+}
+
+nav{
+	display: none;
+}
+ 
+.nav-toggle {
+	 display: none;
+}
+ 
+.nav-toggle:checked ~ nav {
+	 display:contents;
+}
+
+/* ------- maker profile -----------------------------------*/
+
+
+.maker-profile h1{
+		display: none;
+}
+
+.maker-profile h1 +h2{
+	font-weight: 900;
+}
+
+[src="../images/dymo-titles/meet-maker-banner.png"] {
+	display: none;
+}
+
+.polaroid-image{
+	grid-column: 1/3;
+	background-color: #ffffff;
+	padding: 10px 10px 0px;
+	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	justify-self: center;
+	margin-bottom: 20px;
+}
+
+.bio figure{
+	clip-path: polygon(0 0, 77% 0, 96% 100%, 0 100%);
+	float: left;
+}
+
+.bio figure:nth-of-type(even){
+	clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%);
+	float: right;
+}
+
+
+.maker-profile div:first-of-type{
+	grid-column: 1/3;
+	justify-self: center;
+	display: grid;
+	grid-template-columns: 140px;
+}
+
+.maker-profile div:first-of-type h3{
+	font-weight: 700;
+	font-size: 1em;
+}
+
+.maker-profile div h3{
+	grid-column: 1/2;
+}
+
+.maker-profile div p{
+	grid-column: 2/3;
+}
+
+.bio{
+		grid-column: 1/3;
+}
+
+
+/* ------- product rules-----------------------------------*/
+
+p{
+	grid-column: 1/3;
+}
+
+.quick-ref {
+	display: grid;
+}
+
+h1{
+	grid-column: 1/3;
+	justify-self: center;
+}
+
+.quick-ref figure{
+	grid-column: 1/3;
+	justify-self: center;
+}
+
+.quick-ref h2{
+	font-weight:300;
+	font-size: 1.2em;
+	grid-column: 1/3;
+	font-style: italic;
+}
+
+
+.product-listing dl{
+	grid-column: 1/3;
+	justify-self: center;
+	display: grid;
+	grid-column-gap: 20px;
+	justify-content: space-between;
+	grid-row-gap: 10px;
+}
+
+.quick-ref dt:nth-of-type(1){
+    display: none;
+}
+
+
+.quick-ref dd:first-of-type{
+	grid-column: 1/3;
+	justify-self: center;
+	font-size: 1.4em;
+	font-weight: 900;
+}
+
+.product-listing dt{
+	grid-column: 1/2;
+}
+
+.product-listing dd{
+	grid-column: 2/3;
+}
+
+.quick-ref p:first-of-type{
+	justify-self: center;
+	padding-bottom: 30px;
+}
+
+/*buttons*/
+
+
+.how-to-buy{
+	color: var(--button-text);
+	background-color: var(--purple);
+	padding: 10px;
+	border-radius: 0.75em;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+	text-decoration: none;
+}
+
+.how-to-buy:hover{
+	background-color: #c4bccc;
+	color: #745296;
+	text-decoration: underline;
+}
+
+/* -----how made*/
+
+.how-made{
+	display: grid;
+}
+
+/* -----how made*/
+
+
+.how-made figure{
+	grid-column: 1/3;
+	justify-self: center;
+}
+
+#how-made-inline{
+	grid-column: 1/3;
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	justify-self: center;
+}
+
+#how-made-inline h3{
+	grid-column: 1/2;
+}
+
+#how-made-inline ul{
+	grid-column: 2/3;
+}
+
+/* ---variations*/
+
+.variations {
+	display: grid;
+}
+
+.variations p{
+	padding-bottom: 10px;
+}
+
+.variations h3{
+	padding: 10px 0px;
+}
+
+#variations-inline{
+	grid-column: 1/3;
+	display: grid;
+	justify-self: center;
+	grid-column-gap: 20px;
+}
+
+#variations-inline figure{
+	grid-column: 2/3;
+}
+
+#variations-inline ul{
+	grid-column: 1/2;
+}
+
+/* ---who made it*/
+
+.product-listing figure + p {
+	display: none;
+}
+
+.who-made-it h2{
+	font-weight: 900;
+}
+
+/* button styling*/
+
+
+a[href^="../meet-the-maker/"]{
+	color: var(--purple);
+	background-color: var(--pastel-purple);
+	padding: 10px;
+	border-radius: 0.75em;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+	text-decoration: none;
+}
+
+a[href^="../meet-the-maker/"]:hover{
+	background-color:#745296;
+	color:#DFDFDF;
+	text-decoration: underline;
+}
+
+.who-made-it{
+	background-image: 
+						url(images/textures-and-background/fabricpaper-large.png);
+	background-repeat: no-repeat;					
+	display: grid;
+	background-position:center;
+	padding: 10px 0px 20px;
+	box-shadow: 0 4px 6px;
+	min-width: 250px;
+	margin: auto;
+}
+
+.who-made-it p{
+	justify-self: center;
+	padding: 20px 0;
+}
+
+/*340px---------------------*340px----------------*340px----------------*340px----------------*340px----------------*340px----------------*/
+ 
+/*_____header__________________________________________*/
+@media (min-width: 340px){
+	nav ul{
+	   grid-template-columns: 1fr 1fr 1fr;
+	   width: 320px;
+	}
+}
+   
+/*____media @500___media @500__media @500__media @500__media @500__media @500__media @500___*/
+
+/*_____ header__________________________________________*/
+   
+@media (min-width: 500px){
+	nav ul{
+		width: 400px;
+	}
+	
+}
+
+/*____media @700______media @700_____media @700_____media @700_____media @700_____media @700___*/
+
+/*_____all site CSS_______________________________________*/
+@media (min-width: 700px){
+	body{
+		font-size: 1.25em;
+	}
+
+	main{
+		max-width: 600px;
+	}
+
+	/*nav-toggle-*/
+	
+	header{
+		padding-bottom: 80px;
+	}
+	
+	header img{
+		max-width: 200px;
+		max-height: 200px;
+	}
+	
+	/*nav--*/
+	
+	nav ul{
+		width: 600px;
+	}
+/*--maker profile-------------------------------------------*/
+
+	.maker-profile div:first-of-type{
+		grid-template-columns: 180px;
+		grid-row-gap: 15px;
+		padding-top: 10px;
+	}
+
+	.quick-ref img {
+		min-width: 200px;
+	  }
+
+	.quick-ref figure{
+		min-width: 200px;
+	  }
+	
+	.maker-profile img {
+		min-width: 200px;
+	}
+
+	.maker-profile figure {
+		min-width: 200px;
+	}
+
+	.who-made-it{
+		padding: 20px;
+	}
+	
+}
+
+/*____media @900_______media @900_____media @900_____media @900_____media @900_____media @900_____media @900__*/
+
+/*_____all site CSS_______________________________________*/
+
+@media (min-width: 900px){
+	
+	
+/*_____mobile first - header__________________________________________*/
+
+	header img{
+		max-width: inherit;
+		max-height: inherit;
+	}
+
+	svg{
+		display: none;
+	}
+
+	nav{
+		display: inherit;
+		font-weight: 900;
+	}
+
+	nav ul{
+		width: 800px;
+		font-size: 1em;
+	}
+
+	header{
+		justify-items: center;
+	}
+
+/*--maker profile----------------------------------*/
+
+
+	.maker-profile div:first-of-type{
+		grid-column-gap: 20px;
+	}
+
+	.maker-profile h2{
+			grid-column: 1/3;
+		}
+
+	.maker-profile figure{
+			grid-column: 1/2;
+		}
+
+	.bio{
+			grid-column: 1/3;
+		}
+
+	.maker-profile ul{
+			grid-column: 2/3;
+	}
+
+	[src="../images/dymo-titles/meet-maker-banner.png"] {
+		display: inherit;
+		margin-left: 10px;
+}
+
+	.maker-profile h2{
+		display: none;
+	}
+
+	.maker-profile div:first-of-type{
+		grid-template-columns: auto;
+	}
+
+	.maker-profile div:first-of-type figure{
+			grid-column: 1/2;
+			align-self: end;
+		}
+
+	.maker-profile picture{
+		grid-column: 1/4;
+	}
+
+	.maker-profile div:first-of-type h3{
+			grid-column: 2/3;
+	}
+
+	.maker-profile div:first-of-type p{
+		grid-column: 3/4;
+	}
+
+	.maker-profile div:first-of-type figure{
+		grid-row: 2/6;
+	}
+
+}
+
+
+/*_____media @1200______media @1200______media @1200______media @1200______media @1200______media @1200______media @1200___*/
+@media (min-width: 1200px){
+
+/*____all______________________________________*/
+	main{
+		max-width: 800px
+	}
+
+/*_____header__________________________________________*/
+
+
+	nav ul{
+		grid-template-columns: none;
+	}
+
+	nav ul{
+		width: 1100px;
+	}
+
+	nav li{
+		grid-row-end: 2;
+	}
+
+	nav ul{
+
+		background-size: 1100px;
+	}
+
+/*--product-listing-------------------------------------------*/
+
+	.product-listing{
+		max-width: 900px;
+	}
+
+	.quick-ref{
+		justify-content: center;
+	}
+
+	.product-listing p{
+		grid-column: 1/2;
+	}
+	.quick-ref h1{
+		padding-bottom: 50px;
+		justify-self: start;
+	}
+
+	.quick-ref p{
+		grid-column: 1/3;
+		margin-top: 40px;
+	}
+
+	.quick-ref figure{
+		grid-column: 1/2;
+		grid-row: 2/4;
+	}
+
+
+	.product-listing dl{
+		grid-column: 2/3;
+		grid-row: 2/3;
+		padding-bottom: 0;
+	}
+
+	.quick-ref h2{
+		justify-self: start;
+		padding-top: 20px;
+	}
+
+	.quick-ref p:first-of-type{
+		grid-column: 2/3;
+		grid-row: 3;
+	}
+
+	.quick-ref dd:first-of-type{
+		justify-self: start;
+	}
+
+	.product-listing h2{
+		justify-self: start;
+	}
+
+	.how-made {
+		background-color: var(--pastel-green);
+		grid-template-columns: 350px;
+		padding: 20px;
+		margin-bottom: 40px;
+	}
+
+	.how-made p{
+		padding-right: 20px;
+	}
+
+	#how-made-inline{
+		grid-column: 2/3;
+		grid-row: 2/4;
+	}
+
+	.how-made figure{
+		grid-column: 3/4;
+		min-width: 150px;
+		grid-row: 2/4;
+	}
+
+	.how-made img{
+		grid-column: 3/4;
+		min-width: 150px;
+	}
+
+	.variations{
+		grid-template-columns: 350px;
+		margin-bottom: 40px;
+	}
+
+	.variations p{
+		padding: 0 40px 0 0;
+		align-self: end;
+	}
+
+	#variations-inline{
+		justify-self: end;
+		grid-column: 2/3;
+	}
+
+	#variations-inline h3{
+		grid-column: 1/2;
+		padding-top: 0;
+	}
+
+	#variations-inline figure{
+		grid-column: 2/3;
+		min-width: 100px;
+		align-self: center;
+	}
+
+	#variations-inline img{
+		min-width: 100px;
+	}
+
+	#variations-inline h3:last-of-type{
+		grid-column: 3/4;
+		grid-row: 1;
+	}
+	#variations-inline ul:last-of-type{
+		grid-column: 3/4;
+
+	}
+
+	#variations-inline :last-of-type{
+		grid-column: 4/5;
+	}
+
+	.who-made-it{
+		grid-column-gap: 70px;
+	}
+
+	.who-made-it h2{
+		grid-column: 1/2;
+		justify-self: center;
+	}
+
+	.who-made-it figure{
+		grid-column: 1/2;
+		grid-row: 2/6;
+	}
+
+	.who-made-it dl{
+		grid-column: 2/3;
+		align-self: end;
+		grid-row: 2/4;
+	}
+
+	.who-made-it p{
+		grid-column: 2/3;
+		grid-row: 4;
+		align-self: end;
+		padding: 0;
+	}
+
+	.who-made-it p:last-of-type{
+		grid-row: 5;
+	}
+
+	.who-made-it figure{
+		min-width: 150px;
+	}
+
+	.who-made-it img{
+		min-width: 150px;
+	}
+
+}
+
+/*--event-post+++++mobile first+++--*/
+
+.h-event{
+	grid-column: 1/3;
+	display: grid;
+	padding: 20px 0 30px;
+	/*border-bottom: black;
+	border-radius: 2px;
+	border-style: dotted;*/
+	justify-self: center;
+}
+
+.h-event picture{
+	grid-row: 2;
+}
+
+.h-event img{
+	max-width: 100px;
+}
+
+.h-event ul{
+	padding-bottom: 0px;
+	grid-column: 2/3;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+
+.h-event li:nth-of-type(odd){
+	justify-self: center;
+}
+
+.p-name{
+	padding-bottom: 10px;
+	justify-self: start;
+}
+
+/*-----500px------500px-----500px-----500px---*/
+
+@media (min-width: 500px){
+	.h-event img{
+		max-width: 200px;}	
+}
+	
+/*-----700px------700px-----700px-----700px---*/
+
+@media (min-width: 700px){
+	.h-event{
+		padding-top: 40px;}
+
+}
+
+/*--event-posts page+++++mobile first+++--*/
+
+.events{ /*--remove class for wordpress build--*/
+	margin-top: 40px;
+	padding: 10px 0 10px;
+	border-bottom: var(--slate);
+	border-style: solid;
+	border-radius: 2px;
+	justify-self: start;
+	font-weight: 700;
+}
+
+.p-summary{
+	padding-bottom: 0px !important;
+}
+
+/*-----700px------700px-----700px-----700px---*/
+
+@media (min-width: 700px){
+	.events{
+		margin-top: 60px;
+	}
+
+}
+
+@media (min-width: 900px){
+	.events{
+		margin-top: 80px;
+	}
+
+}
+
+
+/*----1200px++++++++---
+	.how-made figure{
+
+		grid-row: 2/4;
+		min-width: 200px;
+		align-self: center;
+	}
+
+	.how-made img{
+		min-width: 200px;
+	}
+
+	.variations p{
+		padding-right: 40px;
+	}
+
+	#variations-inline{
+		grid-column: 2/3;
+	}
+
+	#variations-inline h3{
+		grid-column: 1/2;
+		padding: 0;
+	}
+
+	#variations-inline figure{
+		grid-column: 2/3;
+		min-width: 100px;
+		align-self: center;
+	}
+
+	#variations-inline img{
+		min-width: 100px;
+	}
+
+	#variations-inline h3:last-of-type{
+		grid-column: 3/4;
+		grid-row: 1;
+	}
+	#variations-inline ul:last-of-type{
+		grid-column: 3/4;
+
+	}
+
+	#variations-inline :last-of-type{
+		grid-column: 4/5;
+
+		align-self: center;
+	}----------1200px++++++++---------1200px++++++++--------*/
